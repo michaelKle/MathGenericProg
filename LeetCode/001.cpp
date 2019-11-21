@@ -18,6 +18,7 @@ return [0, 1].
 #include <vector>
 #include <cassert>
 #include <map>
+#include <unordered_map>
 
 
 
@@ -75,9 +76,6 @@ public:
             auto dif = target - nums[i];
             if (hash.find(dif) != hash.end())
             {
-                if (hash[dif] == i)
-                    continue;
-                    
                 return {static_cast<int>(hash[dif]), static_cast<int>(i)};
             }
             
@@ -87,8 +85,6 @@ public:
         
         return {-1, -1};
     }
-
-
 };
 
 
