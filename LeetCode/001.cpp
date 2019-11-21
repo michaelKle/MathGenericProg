@@ -113,7 +113,6 @@ int main(int, char* [])
         std::vector<int> test4 = {3, 3};
         std::vector<int> solution4 = {0, 1};
         assert(s.twoSum(test4, 6) == solution4);
-
     }
     
     return 0;

@@ -11,7 +11,7 @@ struct Timer {
     ~Timer()
     {
         auto dif = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now() - start).count();
-        std::cout << "Took " << dif << "\n";
+        std::cout << "Took " << dif << " ns \n";
     }
     std::chrono::steady_clock::time_point start;
 };
