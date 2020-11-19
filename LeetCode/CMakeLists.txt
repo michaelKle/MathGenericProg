@@ -11,6 +11,7 @@ function(add_leet_example NO)
         PRIVATE ${NO}.cpp
     )
     target_link_libraries(Leet_${NO})
+    target_include_directories(Leet_${NO} PRIVATE ../Common)
     add_test(NAME Leet_${NO} COMMAND Leet_${NO})
 endfunction()
 
