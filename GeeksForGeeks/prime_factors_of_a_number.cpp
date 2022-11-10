@@ -12,39 +12,13 @@ Output should be = 3 3 5 7
 */
 
 #include "timer.h"
-#include "prime_number.h"
+#include "prime_factors_of_a_number.h"
 
 #include <iostream>
 #include <vector>
 #include <cassert>
 #include <map>
 #include <unordered_map>
-
-
-
-std::vector<unsigned int>
-PrimeFactors(unsigned int num)
-{
-    std::vector<unsigned int> ret;
-
-    unsigned int fac = 2;
-    while (num > 1)
-    {
-        if (num % fac == 0)
-        {
-            ret.push_back(fac);
-            num = num / fac;
-            fac = 2;
-        }
-        else
-        {
-            fac = NextPrime(fac);
-        }
-        
-    }
-
-    return ret;
-}
 
 int main(int, char* [])
 {
