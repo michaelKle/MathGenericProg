@@ -1,34 +1,37 @@
 #include "prime_number.h"
 
+
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest/doctest.h"
+
+
 #include "timer.h"
 
 #include <cassert>
 
 
-int main(int, char* [])
+TEST_CASE("is prime")
 {
-    
     {
         Timer t;
-        assert(IsPrime(1) == false);
-        assert(IsPrime(2));
-        assert(IsPrime(3));
-        assert(IsPrime(4) == false);
-        assert(IsPrime(5));
-        assert(IsPrime(6) == false);
-        assert(IsPrime(7));
+        CHECK(IsPrime(1) == false);
+        CHECK(IsPrime(2));
+        CHECK(IsPrime(3));
+        CHECK(IsPrime(4) == false);
+        CHECK(IsPrime(5));
+        CHECK(IsPrime(6) == false);
+        CHECK(IsPrime(7));
     }
 
     {
         Timer t;
-        assert(NextPrime(1) == 2);
-        assert(NextPrime(2) == 3);
-        assert(NextPrime(3) == 5);
-        assert(NextPrime(4) == 5);
-        assert(NextPrime(5) == 7);
-        assert(NextPrime(7) == 11);
-        assert(NextPrime(8) == 11);
+        CHECK(NextPrime(1) == 2);
+        CHECK(NextPrime(2) == 3);
+        CHECK(NextPrime(3) == 5);
+        CHECK(NextPrime(4) == 5);
+        CHECK(NextPrime(5) == 7);
+        CHECK(NextPrime(7) == 11);
+        CHECK(NextPrime(8) == 11);
     }
-    
-    return 0;
+
 }
