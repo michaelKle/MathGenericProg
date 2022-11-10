@@ -12,6 +12,10 @@ return [0, 1].
 
 */
 
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest/doctest.h"
+
+
 #include "timer.h"
 
 #include <iostream>
@@ -88,7 +92,7 @@ public:
 };
 
 
-int main(int, char* [])
+TEST_CASE("001")
 {
     Solution s;
     
@@ -96,20 +100,18 @@ int main(int, char* [])
         Timer t;
         std::vector<int> test1 = {2, 7, 11, 15};
         std::vector<int> solution1 = {0,1};
-        assert(s.twoSum(test1, 9) == solution1);
+        CHECK(s.twoSum(test1, 9) == solution1);
         
         std::vector<int> test2 = {99, 3, 7, 11, 15};
         std::vector<int> solution2 = {0,4};
-        assert(s.twoSum(test2, 114) == solution2);
+        CHECK(s.twoSum(test2, 114) == solution2);
         
         std::vector<int> test3 = {3, 4, 2};
         std::vector<int> solution3 = {1,2};
-        assert(s.twoSum(test3, 6) == solution3);
+        CHECK(s.twoSum(test3, 6) == solution3);
         
         std::vector<int> test4 = {3, 3};
         std::vector<int> solution4 = {0, 1};
-        assert(s.twoSum(test4, 6) == solution4);
-    }
-    
-    return 0;
+        CHECK(s.twoSum(test4, 6) == solution4);
+    }    
 }
