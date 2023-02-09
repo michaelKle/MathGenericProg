@@ -1,1 +1,1 @@
-add_example(leet 001)
+add_task(leet 001)

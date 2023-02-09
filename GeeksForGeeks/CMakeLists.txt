@@ -1,4 +1,4 @@
-add_example(geek prime_number)
-add_example(geek prime_factors_of_a_number)
-add_example(geek greatest_common_divisor)
-add_example(geek eulers_totient_function)
+add_task(geek prime_number)
+add_task(geek prime_factors_of_a_number)
+add_task(geek greatest_common_divisor)
+add_task(geek eulers_totient_function)
